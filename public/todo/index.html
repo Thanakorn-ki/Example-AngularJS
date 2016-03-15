@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='aum'>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="app.js"></script>
+	<title>Thanakorn test title</title>
+</head>
+<body>
+<div ng-controller="test as one">
+ <label>Name:</label>
+      <input type="text" ng-model="name" placeholder="Enter ">
+       <input type="text" ng-model="sur" placeholder="Enter ">
+      <hr>
+    
+      <button ng-click="testget()">test GET</button>
+      <button ng-click="testpost()">test POST</button>
+      ชื่อเต็ม {{fullname}}
+      <center>
+      	<button ng-click="call(15)">15</button>
+      	<button ng-click="call(30)">30</button>
+      	<button ng-click="call(50)">50</button>
+      	<button ng-click="call(75)">75</button>
+            <button ng-click="call(0)">Clear</button>
+      </center>
+      <div ng-repeat="shownum in callsum">
+           result =  {{shownum.sum}}
+      </div>
+      <input type="text" ng-model="change" ng-change="testchange()">
+      count change {{count}}
+      <br><br>{{tem}}
+      <br><br>องศา {{tem.main.humidity-32}}
+      <br><br>เมือง {{tem.name}}
+
+<button ng-click="search()">หาเพลง</button>
+
+</div>
+</body>
+</html>
